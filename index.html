@@ -4,278 +4,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Suji Siddha Clinic | Puttur Kattu Chromepet</title>
-<meta name="description" content="Suji Siddha Clinic and Puttur Kattu Bone Setting Centre in Chromepet, Chennai. Explore services and send an appointment enquiry.">
+<meta name="description" content="Suji Siddha Clinic and Puttur Kattu Bone Setting Centre, Chromepet, Chennai. Explore services and send appointment enquiries.">
 
 <style>
 :root {
-  --blue: #073b82;
-  --blue2: #0786d1;
-  --navy: #062653;
-  --light: #eaf7ff;
-  --white: #ffffff;
-  --text: #26384d;
-  --muted: #687b90;
-  --shadow: 0 10px 30px rgba(0,40,90,.10);
+  --blue:#073b82;
+  --bright:#078bd5;
+  --navy:#062653;
+  --pale:#edf8ff;
+  --text:#26384d;
+  --muted:#667b91;
+  --white:#fff;
+  --shadow:0 10px 30px rgba(0,40,90,.10);
 }
-
-* { margin:0; padding:0; box-sizing:border-box; }
-
-html { scroll-behavior:smooth; }
-
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   color:var(--text);
   background:#f7fbff;
   line-height:1.6;
 }
+a {text-decoration:none;color:inherit}
+button,input,textarea,select {font:inherit}
+.container {width:min(1150px,92%);margin:auto}
 
-a { text-decoration:none; color:inherit; }
-
-button, input, textarea, select { font:inherit; }
-
-.container {
-  width:min(1150px,92%);
-  margin:auto;
-}
-
+/* HEADER */
 header {
   background:white;
-  box-shadow:0 3px 18px rgba(0,0,0,.08);
+  box-shadow:0 3px 18px #00000012;
   position:sticky;
   top:0;
   z-index:100;
 }
-
 .navbar {
   min-height:78px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:20px;
+  gap:15px;
 }
-
 .logo {
   display:flex;
   align-items:center;
   gap:10px;
   color:var(--blue);
   font-weight:900;
-  font-size:17px;
+  font-size:16px;
 }
-
 .logo img {
-  width:48px;
-  height:48px;
-  border-radius:10px;
-  object-fit:cover;
+  width:49px;
+  height:49px;
+  object-fit:contain;
 }
-
 .logo small {
   display:block;
   font-size:9px;
   letter-spacing:1px;
   color:var(--muted);
 }
-
 .nav-links {
   display:flex;
   align-items:center;
-  gap:24px;
+  gap:23px;
 }
-
 .nav-links a {
+  cursor:pointer;
   font-size:14px;
   font-weight:700;
   color:var(--navy);
-  cursor:pointer;
 }
-
-.nav-links a:hover,
-.nav-links a.active {
-  color:var(--blue2);
-}
-
-.nav-links .nav-button {
-  background:var(--blue);
+.nav-links a:hover {color:var(--bright)}
+.nav-links .nav-cta {
   color:white;
-  padding:11px 18px;
+  background:var(--blue);
+  padding:11px 17px;
   border-radius:30px;
 }
-
-.menu-button {
+.menu-btn {
   display:none;
-  background:none;
   border:0;
-  font-size:27px;
+  background:none;
   color:var(--blue);
+  font-size:27px;
   cursor:pointer;
 }
 
-.page { display:none; }
-.page.active { display:block; }
+/* PAGE NAVIGATION */
+.page {display:none}
+.page.active {display:block}
 
+/* HERO */
 .hero {
-  background:
-    linear-gradient(100deg,rgba(3,35,82,.94),rgba(0,95,170,.75)),
-    url("assets/clinic-storefront.jpeg") center/cover;
   color:white;
-  padding:100px 0;
+  padding:95px 0;
+  background:
+    linear-gradient(100deg,rgba(3,35,82,.94),rgba(0,95,170,.78)),
+    url("IMG_1567(1).jpeg") center/cover;
 }
-
-.hero-content { max-width:760px; }
-
+.hero-content {max-width:760px}
 .eyebrow {
-  color:#65c8ff;
+  color:#58c8ff;
+  font-size:12px;
   font-weight:800;
   letter-spacing:2px;
-  font-size:12px;
   text-transform:uppercase;
 }
-
 .hero h1 {
-  font-size:clamp(38px,6vw,66px);
+  font-size:clamp(38px,6vw,65px);
   line-height:1.12;
   margin:15px 0;
 }
-
 .hero p {
   color:#e4f3ff;
   font-size:17px;
   max-width:680px;
 }
-
-.hero-actions {
+.actions {
   display:flex;
-  gap:13px;
   flex-wrap:wrap;
-  margin-top:28px;
+  gap:12px;
+  margin-top:25px;
 }
-
 .btn {
   display:inline-flex;
   justify-content:center;
   align-items:center;
-  padding:13px 22px;
+  padding:13px 21px;
+  border:0;
   border-radius:30px;
   background:var(--blue);
   color:white;
   font-weight:800;
-  border:0;
   cursor:pointer;
   transition:.2s;
 }
+.btn:hover {transform:translateY(-2px)}
+.btn-bright {background:var(--bright)}
+.btn-white {background:white;color:var(--blue)}
 
-.btn:hover { transform:translateY(-2px); }
-
-.btn-blue { background:var(--blue2); }
-
-.btn-white {
-  background:white;
-  color:var(--blue);
-}
-
-.section { padding:75px 0; }
-
-.section-light { background:#edf7ff; }
-
-.section-heading {
-  text-align:center;
+/* SECTIONS */
+.section {padding:72px 0}
+.light {background:var(--pale)}
+.heading {
   max-width:760px;
+  text-align:center;
   margin:0 auto 38px;
 }
-
-.section-heading h2 {
+.heading h2 {
   color:var(--navy);
-  font-size:clamp(29px,4vw,43px);
+  font-size:clamp(28px,4vw,42px);
   line-height:1.2;
   margin:9px 0 13px;
 }
-
-.section-heading p { color:var(--muted); }
-
-.banner-image {
+.heading p {color:var(--muted)}
+.banner {
+  display:block;
   width:100%;
-  max-height:620px;
-  object-fit:contain;
-  border-radius:18px;
+  height:auto;
+  border-radius:16px;
   box-shadow:var(--shadow);
-  background:white;
 }
-
 .grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:23px;
 }
-
-.grid-two { grid-template-columns:repeat(2,1fr); }
-
+.two {grid-template-columns:repeat(2,1fr)}
 .card {
   background:white;
-  border:1px solid #e0ebf4;
-  border-radius:19px;
+  border:1px solid #e1ebf4;
+  border-radius:18px;
   overflow:hidden;
   box-shadow:var(--shadow);
 }
-
 .card img {
   width:100%;
-  height:220px;
+  height:225px;
   object-fit:cover;
 }
-
-.card-content { padding:23px; }
-
+.card-body {padding:22px}
 .card h3 {
   color:var(--navy);
   font-size:21px;
   margin-bottom:8px;
 }
+.card p {font-size:14px;color:var(--muted)}
+.card .btn {margin-top:17px}
 
-.card p {
-  color:var(--muted);
-  font-size:14px;
+/* ORIGINAL PHOTOS */
+.photo-original {
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:16px;
+  background:white;
 }
-
-.card .btn { margin-top:17px; }
-
+.store-photo {
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
 .split {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:42px;
+  gap:40px;
   align-items:center;
 }
-
-.split img {
-  width:100%;
-  border-radius:20px;
-  max-height:450px;
-  object-fit:cover;
-}
-
 .split h2 {
   color:var(--navy);
   font-size:clamp(29px,4vw,42px);
   line-height:1.2;
   margin:10px 0 15px;
 }
+.split p {color:var(--muted)}
 
-.split p { color:var(--muted); }
-
-.service-image {
-  height:220px;
-  object-fit:cover;
-  background:#eaf4fc;
+/* SERVICE TAGS */
+.service-list {
+  margin-top:25px;
+  padding:27px;
+  background:white;
+  border:1px solid #e1ebf4;
+  border-radius:18px;
 }
-
+.service-list h3 {
+  color:var(--navy);
+  font-size:22px;
+}
 .tags {
   display:flex;
   flex-wrap:wrap;
   gap:10px;
   margin-top:17px;
 }
-
 .tag {
   background:#eaf5ff;
   color:#164b83;
@@ -285,45 +251,17 @@ header {
   font-weight:700;
 }
 
-.service-list {
-  background:white;
-  border:1px solid #e0ebf4;
-  border-radius:18px;
-  padding:27px;
-  margin-top:25px;
-}
-
-.service-list h3 {
-  color:var(--navy);
-  font-size:22px;
-}
-
-.callout {
-  background:linear-gradient(120deg,#062653,#087fce);
-  color:white;
-  padding:35px;
-  border-radius:22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-
-.callout h2 { font-size:27px; }
-.callout p { color:#dceeff; margin-top:5px; }
-
+/* VIDEOS */
 .video-card {
   background:white;
   border-radius:18px;
   overflow:hidden;
   box-shadow:var(--shadow);
 }
-
 .video-frame {
   position:relative;
   padding-top:177.78%;
 }
-
 .video-frame iframe {
   position:absolute;
   inset:0;
@@ -331,22 +269,17 @@ header {
   height:100%;
   border:0;
 }
+.video-card .card-body {padding:17px}
 
-.video-card .card-content { padding:17px; }
-
+/* APPOINTMENT */
 .form-box {
   background:white;
-  border:1px solid #e0ebf4;
+  border:1px solid #e1ebf4;
   border-radius:20px;
   padding:30px;
   box-shadow:var(--shadow);
 }
-
-.form-box h2 {
-  color:var(--navy);
-  margin-bottom:7px;
-}
-
+.form-box h2 {color:var(--navy);margin-bottom:5px}
 .form-box label {
   display:block;
   margin:16px 0 6px;
@@ -354,7 +287,6 @@ header {
   font-weight:800;
   color:var(--navy);
 }
-
 .form-box input,
 .form-box select,
 .form-box textarea {
@@ -365,94 +297,70 @@ header {
   background:#fbfdff;
   outline:none;
 }
-
 .form-box input:focus,
 .form-box select:focus,
-.form-box textarea:focus {
-  border-color:var(--blue2);
-}
+.form-box textarea:focus {border-color:var(--bright)}
+.form-box textarea {min-height:125px;resize:vertical}
+.form-box button {width:100%;margin-top:20px}
+.note {font-size:12px;color:var(--muted);margin-top:12px}
 
-.form-box textarea {
-  min-height:125px;
-  resize:vertical;
-}
-
-.form-box button {
-  width:100%;
-  margin-top:20px;
-}
-
-.small-note {
-  font-size:12px;
-  color:var(--muted);
-  margin-top:12px;
-}
-
-.contact-section {
+/* CONTACT */
+.contact {
   background:var(--navy);
   color:white;
 }
+.contact h2 {color:white}
+.contact p {color:#d7e8f8}
+.contact .eyebrow {color:#69caff}
+.contact .store-photo {box-shadow:none}
 
-.contact-section h2 { color:white; }
-.contact-section p { color:#d7e8f8; }
-
-.contact-section .eyebrow { color:#69caff; }
-
-.contact-section img {
-  width:100%;
-  border-radius:18px;
-}
-
+/* FOOTER */
 footer {
   background:#041a37;
   color:#d8e8f7;
   padding:40px 0;
 }
-
 .footer-grid {
   display:grid;
   grid-template-columns:2fr 1fr 1fr;
   gap:30px;
 }
-
-footer h3 { color:white; margin-bottom:10px; }
-footer a { display:block; font-size:14px; margin:7px 0; }
-footer a:hover { color:#69caff; }
-
-footer .copyright {
+footer h3 {color:white;margin-bottom:10px}
+footer a {
+  display:block;
+  font-size:14px;
+  margin:7px 0;
+  cursor:pointer;
+}
+footer a:hover {color:#69caff}
+.copyright {
   border-top:1px solid #29415f;
   margin-top:25px;
   padding-top:18px;
   font-size:12px;
   color:#9eb5cd;
 }
-
 .whatsapp {
   position:fixed;
   right:20px;
   bottom:20px;
-  width:58px;
-  height:58px;
+  width:57px;
+  height:57px;
   border-radius:50%;
   display:grid;
   place-items:center;
   background:#20bd65;
   color:white;
-  font-size:27px;
+  font-size:25px;
   font-weight:bold;
   box-shadow:0 7px 25px #0003;
   z-index:90;
 }
+.disclaimer {font-size:12px;color:var(--muted);margin-top:24px}
 
-.disclaimer {
-  color:#718196;
-  font-size:12px;
-  margin-top:25px;
-}
-
+/* MOBILE */
 @media(max-width:850px) {
-  .menu-button { display:block; }
-
+  .menu-btn {display:block}
   .nav-links {
     display:none;
     position:absolute;
@@ -465,22 +373,17 @@ footer .copyright {
     align-items:stretch;
     box-shadow:0 10px 20px #0002;
   }
-
-  .nav-links.open { display:flex; }
-
-  .grid { grid-template-columns:repeat(2,1fr); }
-  .split { grid-template-columns:1fr; }
-  .callout { display:block; }
-  .callout .btn { margin-top:18px; }
+  .nav-links.open {display:flex}
+  .grid {grid-template-columns:repeat(2,1fr)}
+  .split {grid-template-columns:1fr}
 }
-
 @media(max-width:560px) {
-  .section { padding:55px 0; }
-  .grid,.grid-two,.footer-grid { grid-template-columns:1fr; }
-  .hero { padding:70px 0; }
-  .form-box { padding:22px; }
-  .logo { font-size:14px; }
-  .logo img { width:42px;height:42px; }
+  .section {padding:52px 0}
+  .grid,.two,.footer-grid {grid-template-columns:1fr}
+  .hero {padding:70px 0}
+  .form-box {padding:21px}
+  .logo {font-size:13px}
+  .logo img {width:42px;height:42px}
 }
 </style>
 </head>
@@ -491,29 +394,28 @@ footer .copyright {
   <div class="container navbar">
 
     <a class="logo" href="#home" onclick="showPage('home')">
-      <img src="assets/suji-puttur-banner.png" alt="Suji Siddha Clinic logo">
+      <img src="IMG_1568(1).png" alt="Suji Siddha Clinic banner logo">
       <span>
         SUJI SIDDHA CLINIC
         <small>PUTTUR KATTU & BONE SETTING CENTRE</small>
       </span>
     </a>
 
-    <button class="menu-button" onclick="toggleMenu()">☰</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
 
     <nav class="nav-links" id="navLinks">
       <a onclick="showPage('home')">Home</a>
       <a onclick="showPage('services')">Our Services</a>
       <a onclick="showPage('appointment')">Appointment</a>
-      <a onclick="showPage('home');setTimeout(()=>document.getElementById('contact').scrollIntoView(),100)">Contact</a>
-      <a class="nav-button" onclick="showPage('appointment')">Book Appointment</a>
+      <a onclick="showPage('contactPage')">Contact</a>
+      <a class="nav-cta" onclick="showPage('appointment')">Book Appointment</a>
     </nav>
 
   </div>
 </header>
 
 
-<!-- ================= HOME PAGE ================= -->
-
+<!-- HOME PAGE -->
 <main id="home" class="page active">
 
   <section class="hero">
@@ -521,19 +423,19 @@ footer .copyright {
       <div class="eyebrow">CHROMEPET • CHENNAI</div>
 
       <h1>
-        SUJI SIDDHA CLINIC chromepet
+        SUJI SIDDHA CLINIC
         <br>
-        <span style="color:#8ed8ff">PUTTUR KATTU chromepet</span>
+        <span style="color:#8ed8ff">PUTTUR KATTU</span>
       </h1>
 
       <p>
-        Puttur Kattu chromepet & Bone Setting Centre.
+        Puttur Kattu & Bone Setting Centre.
         Explore our clinic, learn about our services
         and contact us for appointment enquiries.
       </p>
 
-      <div class="hero-actions">
-        <a class="btn btn-blue" onclick="showPage('appointment')">
+      <div class="actions">
+        <a class="btn btn-bright" onclick="showPage('appointment')">
           Book an Appointment →
         </a>
 
@@ -547,22 +449,19 @@ footer .copyright {
   </section>
 
 
-  <!-- CLINIC BANNER -->
-
-  <section class="section section-light">
+  <!-- YOUR EXACT UPLOADED BANNER PHOTO -->
+  <section class="section light">
     <div class="container">
       <img
-        class="banner-image"
-        src="assets/suji-puttur-banner.png"
-        alt="Suji Siddha Clinic Puttur Kattu Bone Setting Centre banner">
+        class="banner"
+        src="IMG_1568(1).png"
+        alt="Original Suji Siddha Clinic Puttur Kattu banner">
     </div>
   </section>
 
 
-  <!-- ABOUT -->
-
   <section class="section">
-    <div class="container section-heading">
+    <div class="container heading">
       <div class="eyebrow">WELCOME TO OUR CLINIC</div>
       <h2>Traditional Care. Patient-Focused Service.</h2>
       <p>
@@ -572,17 +471,19 @@ footer .copyright {
       </p>
     </div>
 
-    <div class="container grid grid-two">
+    <div class="container grid two">
 
       <article class="card">
-        <img src="assets/clinic-storefront.jpeg"
-             alt="Puttur Kattu clinic storefront">
+        <!-- YOUR EXACT ORIGINAL STOREFRONT PHOTO -->
+        <img
+          src="IMG_1567(1).jpeg"
+          alt="Original Puttur Kattu Chromepet storefront">
 
-        <div class="card-content">
+        <div class="card-body">
           <h3>Puttur Kattu Centre</h3>
           <p>
-            View our clinic listing and find location
-            information through our Justdial page.
+            View our clinic listing and location information
+            through our Justdial page.
           </p>
 
           <a class="btn"
@@ -594,10 +495,11 @@ footer .copyright {
       </article>
 
       <article class="card">
-        <img src="assets/suji-puttur-banner.png"
-             alt="Suji Siddha Clinic banner">
+        <img
+          src="IMG_1568(1).png"
+          alt="Original Suji Siddha Clinic banner">
 
-        <div class="card-content">
+        <div class="card-body">
           <h3>Suji Siddha Clinic</h3>
           <p>
             Explore our services and send an appointment
@@ -614,40 +516,35 @@ footer .copyright {
   </section>
 
 
-  <!-- SERVICES PREVIEW -->
-
-  <section class="section section-light">
+  <section class="section light">
     <div class="container split">
-
       <div>
         <div class="eyebrow">OUR SERVICES</div>
-
         <h2>Traditional Bone Treatment Methods</h2>
-
         <p>
-          Our traditional system of medicine works in
-          conjunction with other medical systems.
-          Browse our treatment and therapy categories
-          to learn more.
+          Explore our treatment and therapy categories.
+          Contact the clinic to ask about service availability
+          and suitability.
         </p>
 
-        <div class="hero-actions">
+        <div class="actions">
           <a class="btn" onclick="showPage('services')">
             See All Services →
           </a>
         </div>
       </div>
 
-      <img src="https://putturkattu.com/services/5.jpg"
-           alt="Shoulder pain service">
+      <img
+        class="photo-original"
+        src="IMG_1568(1).png"
+        alt="Original Suji Siddha Clinic banner">
     </div>
   </section>
 
 
-  <!-- VIDEOS -->
-
+  <!-- YOUTUBE VIDEOS -->
   <section class="section">
-    <div class="container section-heading">
+    <div class="container heading">
       <div class="eyebrow">VIDEOS & UPDATES</div>
       <h2>Watch Our Clinic Videos</h2>
       <p>Watch our YouTube Shorts and follow us on Instagram.</p>
@@ -659,51 +556,39 @@ footer .copyright {
         <div class="video-frame">
           <iframe
             src="https://www.youtube-nocookie.com/embed/4OA7kKc3_2Y"
-            title="Puttur Kattu clinic video"
+            title="Puttur Kattu video 1"
             loading="lazy"
-            allowfullscreen>
-          </iframe>
+            allowfullscreen></iframe>
         </div>
-        <div class="card-content">
-          <h3>Clinic Video 1</h3>
-          <p>Watch our YouTube Short.</p>
-        </div>
+        <div class="card-body"><h3>Clinic Video 1</h3></div>
       </article>
 
       <article class="video-card">
         <div class="video-frame">
           <iframe
             src="https://www.youtube-nocookie.com/embed/vOaad03TbKc"
-            title="Puttur Kattu clinic video"
+            title="Puttur Kattu video 2"
             loading="lazy"
-            allowfullscreen>
-          </iframe>
+            allowfullscreen></iframe>
         </div>
-        <div class="card-content">
-          <h3>Clinic Video 2</h3>
-          <p>Watch our YouTube Short.</p>
-        </div>
+        <div class="card-body"><h3>Clinic Video 2</h3></div>
       </article>
 
       <article class="video-card">
         <div class="video-frame">
           <iframe
             src="https://www.youtube-nocookie.com/embed/5IdAnwqfYVU"
-            title="Puttur Kattu clinic video"
+            title="Puttur Kattu video 3"
             loading="lazy"
-            allowfullscreen>
-          </iframe>
+            allowfullscreen></iframe>
         </div>
-        <div class="card-content">
-          <h3>Clinic Video 3</h3>
-          <p>Watch our YouTube Short.</p>
-        </div>
+        <div class="card-body"><h3>Clinic Video 3</h3></div>
       </article>
 
     </div>
 
-    <div class="container hero-actions" style="justify-content:center">
-      <a class="btn btn-blue"
+    <div class="container actions" style="justify-content:center">
+      <a class="btn btn-bright"
          href="https://www.instagram.com/putturkattu_chrompet/"
          target="_blank" rel="noopener">
         Follow Instagram ↗
@@ -717,79 +602,25 @@ footer .copyright {
     </div>
   </section>
 
-
-  <!-- CONTACT -->
-
-  <section class="section contact-section" id="contact">
-    <div class="container split">
-
-      <div>
-        <div class="eyebrow">VISIT OUR CLINIC</div>
-        <h2>Find Us in Chromepet</h2>
-
-        <p>
-          Suji Siddha Clinic and Puttur Kattu Centre,
-          Chromepet, Chennai, Tamil Nadu.
-        </p>
-
-        <p style="margin-top:15px">
-          Use the Google Maps location pin below
-          for directions to the clinic.
-        </p>
-
-        <div class="hero-actions">
-
-          <a class="btn btn-blue"
-             href="https://maps.app.goo.gl/68bJcuMxPKBYrkSn9"
-             target="_blank" rel="noopener">
-            Open Google Maps ↗
-          </a>
-
-          <a class="btn btn-white"
-             href="https://share.google/NdnThAAwVDAD93AFQ"
-             target="_blank" rel="noopener">
-            Google Clinic Link ↗
-          </a>
-
-        </div>
-
-        <p style="margin-top:20px">
-          <a href="https://jsdl.in/DT-20UMMQ6EU2A"
-             target="_blank" rel="noopener">
-            View our Justdial listing ↗
-          </a>
-        </p>
-      </div>
-
-      <img src="assets/clinic-storefront.jpeg"
-           alt="Puttur Kattu clinic entrance">
-    </div>
-  </section>
-
 </main>
 
 
-<!-- ================= SERVICES PAGE ================= -->
-
+<!-- OUR SERVICES PAGE -->
 <main id="services" class="page">
 
   <section class="hero">
     <div class="container hero-content">
-      <div class="eyebrow">OUR SERVICES</div>
-
-      <h1>Traditional Bone Treatment Methods</h1>
-
+      <div class="eyebrow">SUJI SIDDHA CLINIC • CHROMEPET</div>
+      <h1>Our Services</h1>
       <p>
-        Explore our treatment and therapy categories.
-        Contact the clinic to ask about service availability
-        and suitability.
+        Traditional bone treatment methods and therapy
+        categories. Explore the services listed below.
       </p>
 
-      <div class="hero-actions">
-        <a class="btn btn-blue" onclick="showPage('appointment')">
+      <div class="actions">
+        <a class="btn btn-bright" onclick="showPage('appointment')">
           Enquire About a Service →
         </a>
-
         <a class="btn btn-white" onclick="showPage('home')">
           Back to Home
         </a>
@@ -799,81 +630,59 @@ footer .copyright {
 
 
   <section class="section">
-    <div class="container section-heading">
-      <div class="eyebrow">FEATURED SERVICES</div>
-      <h2>Explore Our Services</h2>
-
+    <div class="container heading">
+      <div class="eyebrow">OUR SERVICES</div>
+      <h2>Traditional Bone Treatment Methods</h2>
       <p>
-        Traditional care and therapy categories.
-        The information below is general and does not
-        guarantee a particular treatment outcome.
+        Our traditional system of medicine works in conjunction
+        with other medical systems. Contact the clinic for
+        information about treatment options and suitability.
       </p>
     </div>
-
 
     <div class="container grid">
 
       <article class="card">
-        <img class="service-image"
-             src="https://putturkattu.com/services/5.jpg"
-             alt="Shoulder pain">
-
-        <div class="card-content">
+        <img src="IMG_1568(1).png"
+             alt="Suji Siddha Clinic service banner">
+        <div class="card-body">
           <h3>Shoulder Pain</h3>
-
           <p>
             Information about shoulder girdle pain
             and tight shoulder blades.
           </p>
-
-          <a class="btn"
-             href="https://putturkattu.com/services#shoulder_pain"
-             target="_blank" rel="noopener">
-            More Details ↗
+          <a class="btn" onclick="showPage('appointment')">
+            Enquire Now →
           </a>
         </div>
       </article>
 
-
       <article class="card">
-        <img class="service-image"
-             src="https://putturkattu.com/services/2.jpg"
-             alt="Back and hip pain">
-
-        <div class="card-content">
+        <img src="IMG_1568(1).png"
+             alt="Suji Siddha Clinic service banner">
+        <div class="card-body">
           <h3>Back and Hip Pain</h3>
-
           <p>
             Information about back pain associated
             with disc and joint conditions.
           </p>
-
-          <a class="btn"
-             href="https://putturkattu.com/services#back_pain"
-             target="_blank" rel="noopener">
-            More Details ↗
+          <a class="btn" onclick="showPage('appointment')">
+            Enquire Now →
           </a>
         </div>
       </article>
 
-
       <article class="card">
-        <img class="service-image"
-             src="https://putturkattu.com/services/3.jpg"
-             alt="Joint pain relief">
-
-        <div class="card-content">
+        <img src="IMG_1568(1).png"
+             alt="Suji Siddha Clinic service banner">
+        <div class="card-body">
           <h3>Joint Pain Relief</h3>
-
           <p>
-            Explore traditional care categories
-            for joint discomfort and mobility concerns.
+            Explore traditional care categories for
+            joint discomfort and mobility concerns.
           </p>
-
-          <a class="btn"
-             href="https://putturkattu.com/services#knee_pain"
-             target="_blank" rel="noopener">
-            More Details ↗
+          <a class="btn" onclick="showPage('appointment')">
+            Enquire Now →
           </a>
         </div>
       </article>
@@ -881,11 +690,8 @@ footer .copyright {
     </div>
 
 
-    <!-- ADDITIONAL TREATMENTS -->
-
     <div class="container service-list">
       <h3>Additional Treatment Categories</h3>
-
       <div class="tags">
         <span class="tag">Neck Pain</span>
         <span class="tag">Osteoarthritis</span>
@@ -901,11 +707,8 @@ footer .copyright {
     </div>
 
 
-    <!-- THERAPY SERVICES -->
-
     <div class="container service-list">
       <h3>Therapy Services</h3>
-
       <div class="tags">
         <span class="tag">Pain Therapy</span>
         <span class="tag">Spinal Physiotherapy</span>
@@ -917,47 +720,37 @@ footer .copyright {
     </div>
 
 
-    <div class="container" style="margin-top:35px">
-      <div class="callout">
-        <div>
-          <h2>Have a Question About a Service?</h2>
-          <p>Send us your details and appointment enquiry.</p>
-        </div>
-
-        <a class="btn btn-blue"
-           onclick="showPage('appointment')">
+    <div class="container" style="margin-top:30px">
+      <div class="card-body" style="background:#edf7ff;border-radius:18px">
+        <h3>Have a Question About a Service?</h3>
+        <p>Send an appointment enquiry to our clinic.</p>
+        <a class="btn" onclick="showPage('appointment')">
           Book Appointment →
         </a>
       </div>
 
       <p class="disclaimer">
-        Important: These are service categories, not diagnoses
-        or guarantees of cure. Treatment options, risks and
-        suitability differ between individuals. Consult a
-        qualified healthcare professional for medical advice.
-        Seek urgent medical attention for emergencies.
+        Service descriptions are general information and are
+        not a medical diagnosis or a guarantee of results.
+        Treatment suitability and risks should be discussed
+        with a qualified healthcare professional.
       </p>
     </div>
 
   </section>
-
 </main>
 
 
-<!-- ================= APPOINTMENT PAGE ================= -->
-
+<!-- APPOINTMENT PAGE -->
 <main id="appointment" class="page">
 
   <section class="hero">
     <div class="container hero-content">
       <div class="eyebrow">APPOINTMENT ENQUIRY</div>
-
       <h1>Book an Appointment</h1>
-
       <p>
-        Fill in your details and tell us what you would
-        like to enquire about. Your message will open
-        in WhatsApp for you to review and send.
+        Fill in your name, phone number and query.
+        Your enquiry will be prepared in WhatsApp.
       </p>
     </div>
   </section>
@@ -968,30 +761,20 @@ footer .copyright {
 
       <div>
         <div class="eyebrow">GET IN TOUCH</div>
-
-        <h2 style="color:var(--navy);font-size:38px;line-height:1.2;margin:12px 0">
-          We're Ready to Hear From You.
-        </h2>
-
-        <p style="color:var(--muted)">
+        <h2>We're Ready to Hear From You.</h2>
+        <p>
           Complete the appointment enquiry form.
-          Please enter a phone number where our team
-          can contact you.
+          Enter a phone number where the clinic can
+          contact you.
         </p>
 
-        <div style="margin-top:25px">
+        <div style="margin-top:22px">
           <p><strong>Clinic:</strong> Suji Siddha Clinic • Puttur Kattu</p>
-
-          <p style="margin-top:10px">
-            <strong>Location:</strong> Chromepet, Chennai, Tamil Nadu
-          </p>
-
-          <p style="margin-top:10px">
-            <strong>Phone / WhatsApp:</strong> +91 73973 83061
-          </p>
+          <p><strong>Location:</strong> Chromepet, Chennai, Tamil Nadu</p>
+          <p><strong>Phone / WhatsApp:</strong> +91 73973 83061</p>
         </div>
 
-        <div class="hero-actions">
+        <div class="actions">
           <a class="btn"
              href="https://maps.app.goo.gl/68bJcuMxPKBYrkSn9"
              target="_blank" rel="noopener">
@@ -999,131 +782,160 @@ footer .copyright {
           </a>
         </div>
 
-        <img src="assets/clinic-storefront.jpeg"
-             alt="Clinic storefront"
-             style="margin-top:30px">
+        <img class="store-photo"
+             src="IMG_1567(1).jpeg"
+             alt="Original Puttur Kattu storefront"
+             style="margin-top:25px">
       </div>
 
 
-      <!-- APPOINTMENT FORM -->
-
       <form class="form-box" id="appointmentForm">
-
         <h2>Appointment Form</h2>
-
-        <p class="small-note">
-          Fields marked * are required.
-        </p>
+        <p class="note">Fields marked * are required.</p>
 
         <label for="customerName">Your Name *</label>
-
         <input
-          type="text"
           id="customerName"
-          name="name"
+          type="text"
           placeholder="Enter your full name"
           maxlength="80"
           required>
 
-
         <label for="customerPhone">Phone Number *</label>
-
         <input
-          type="tel"
           id="customerPhone"
-          name="phone"
+          type="tel"
           placeholder="Enter your phone number"
           maxlength="20"
           required>
 
-
         <label for="clinicChoice">Choose Clinic *</label>
-
-        <select id="clinicChoice" name="clinic" required>
+        <select id="clinicChoice" required>
           <option value="">Select clinic</option>
           <option value="Puttur Kattu Centre">Puttur Kattu Centre</option>
           <option value="Suji Siddha Clinic">Suji Siddha Clinic</option>
         </select>
 
-
         <label for="customerQuery">Your Query *</label>
-
         <textarea
           id="customerQuery"
-          name="query"
           placeholder="Tell us about your enquiry or the service you are interested in..."
           maxlength="1200"
           required></textarea>
 
-
-        <button class="btn btn-blue" type="submit">
+        <button class="btn btn-bright" type="submit">
           Send Appointment Enquiry via WhatsApp →
         </button>
 
-        <p class="small-note">
+        <p class="note">
           This form opens WhatsApp with your enquiry.
-          It does not confirm an appointment or save
-          information to a database. Please press Send
-          in WhatsApp to contact the clinic.
+          It does not automatically save bookings or confirm
+          an appointment. Press Send in WhatsApp to contact
+          the clinic.
         </p>
-
       </form>
 
     </div>
   </section>
-
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- CONTACT PAGE -->
+<main id="contactPage" class="page">
 
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="eyebrow">VISIT OUR CLINIC</div>
+      <h1>Contact Us</h1>
+      <p>Find our clinic in Chromepet, Chennai.</p>
+
+      <div class="actions">
+        <a class="btn btn-bright"
+           href="https://maps.app.goo.gl/68bJcuMxPKBYrkSn9"
+           target="_blank" rel="noopener">
+          Open Google Maps ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+
+      <div>
+        <div class="eyebrow">CHROMEPET • CHENNAI</div>
+        <h2>Suji Siddha Clinic & Puttur Kattu Centre</h2>
+
+        <p>
+          Chromepet, Chennai, Tamil Nadu.
+          Use the Google Maps pin below for directions.
+        </p>
+
+        <div class="actions">
+          <a class="btn"
+             href="https://maps.app.goo.gl/68bJcuMxPKBYrkSn9"
+             target="_blank" rel="noopener">
+            Get Directions ↗
+          </a>
+
+          <a class="btn btn-bright"
+             href="https://jsdl.in/DT-20UMMQ6EU2A"
+             target="_blank" rel="noopener">
+            Justdial Listing ↗
+          </a>
+        </div>
+
+        <p style="margin-top:20px">
+          <a href="https://share.google/NdnThAAwVDAD93AFQ"
+             target="_blank" rel="noopener">
+            Open Google Clinic Share Link ↗
+          </a>
+        </p>
+      </div>
+
+      <img class="store-photo"
+           src="IMG_1567(1).jpeg"
+           alt="Original Puttur Kattu clinic storefront">
+
+    </div>
+  </section>
+</main>
+
+
+<!-- FOOTER -->
 <footer>
   <div class="container footer-grid">
 
     <div>
       <h3>Suji Siddha Clinic</h3>
-
       <p>
         Puttur Kattu & Bone Setting Centre
         <br>
         Chromepet, Chennai, Tamil Nadu.
       </p>
-
-      <p style="margin-top:12px;font-size:13px">
-        Traditional care and therapy service information.
-      </p>
     </div>
 
     <div>
       <h3>Quick Links</h3>
-
       <a onclick="showPage('home')">Home</a>
       <a onclick="showPage('services')">Our Services</a>
       <a onclick="showPage('appointment')">Appointment</a>
+      <a onclick="showPage('contactPage')">Contact</a>
     </div>
 
     <div>
       <h3>Connect With Us</h3>
-
       <a href="https://www.instagram.com/putturkattu_chrompet/"
-         target="_blank" rel="noopener">
-        Instagram ↗
-      </a>
+         target="_blank" rel="noopener">Instagram ↗</a>
 
       <a href="https://youtube.com/@siddaclinicclinic2265"
-         target="_blank" rel="noopener">
-        YouTube ↗
-      </a>
+         target="_blank" rel="noopener">YouTube ↗</a>
 
       <a href="https://jsdl.in/DT-20UMMQ6EU2A"
-         target="_blank" rel="noopener">
-        Justdial ↗
-      </a>
+         target="_blank" rel="noopener">Justdial ↗</a>
 
       <a href="https://maps.app.goo.gl/68bJcuMxPKBYrkSn9"
-         target="_blank" rel="noopener">
-        Google Maps ↗
-      </a>
+         target="_blank" rel="noopener">Google Maps ↗</a>
     </div>
 
   </div>
@@ -1145,37 +957,32 @@ footer .copyright {
 
 
 <script>
-/* PAGE NAVIGATION */
-
+/* INTERNAL WEBSITE PAGE NAVIGATION */
 function showPage(pageName) {
   document.querySelectorAll(".page").forEach(page => {
     page.classList.remove("active");
   });
 
-  const selectedPage = document.getElementById(pageName);
+  const page = document.getElementById(pageName);
 
-  if (selectedPage) {
-    selectedPage.classList.add("active");
+  if (page) {
+    page.classList.add("active");
   }
 
   document.getElementById("navLinks").classList.remove("open");
 
   window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+    top:0,
+    behavior:"smooth"
   });
 }
 
-
 /* MOBILE MENU */
-
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("open");
 }
 
-
 /* APPOINTMENT FORM */
-
 document.getElementById("appointmentForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
@@ -1207,14 +1014,11 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
     "https://wa.me/917397383061?text=" +
     encodeURIComponent(message);
 
-  window.open(whatsappURL, "_blank", "noopener");
+  window.open(whatsappURL, "_blank");
 });
 
-
-/* CURRENT YEAR */
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+/* COPYRIGHT YEAR */
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
