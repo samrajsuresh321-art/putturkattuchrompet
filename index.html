@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suji Siddha Clinic | Puttur Kattu Chromepet</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5faff;color:#193452;line-height:1.6}
+header{background:white;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0001}
+header h2{color:#073477;font-size:20px}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:#073477;text-decoration:none;font-weight:bold;cursor:pointer}
+nav a:hover{color:#078bd5}
+button,.btn{background:#073477;color:white;border:0;padding:13px 22px;border-radius:30px;cursor:pointer;text-decoration:none;font-weight:bold;display:inline-block}
+button:hover,.btn:hover{background:#078bd5}
+.page{display:none}
+.page.active{display:block}
+.hero{background:linear-gradient(100deg,#062653eF,#087fc9d9),url('banner.png') center/cover;color:white;padding:85px 7%}
+.hero h1{font-size:clamp(35px,6vw,60px);line-height:1.15;margin:15px 0}
+.hero p{max-width:650px;font-size:18px}
+.hero .btn{margin:20px 10px 0 0;background:white;color:#073477}
+section.content{padding:65px 6%}
+.heading{text-align:center;max-width:750px;margin:0 auto 35px}
+.heading h2{font-size:36px;color:#073477;margin-bottom:10px}
+.heading p{color:#637990}
+.banner{width:100%;height:auto;border-radius:16px;display:block}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 8px 25px #07347716;border:1px solid #e1ebf4}
+.card img{width:100%;height:300px;object-fit:contain;background:white}
+.card-body{padding:24px}
+.card h3{color:#073477;font-size:23px;margin-bottom:8px}
+.card p{color:#637990;margin-bottom:15px}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.service{background:white;padding:25px;border-radius:15px;box-shadow:0 5px 20px #07347712}
+.service h3{color:#073477;margin-bottom:8px}
+.service p{color:#637990;font-size:14px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.tag{background:#e5f3ff;color:#073477;padding:9px 15px;border-radius:25px;font-weight:bold;font-size:13px}
+.formbox{max-width:650px;margin:auto;background:white;padding:30px;border-radius:18px;box-shadow:0 8px 25px #07347716}
+.formbox h2{color:#073477}
+label{display:block;margin:15px 0 5px;font-weight:bold}
+input,textarea,select{width:100%;padding:13px;border:1px solid #ccd9e6;border-radius:9px;font:inherit}
+textarea{min-height:120px}
+.formbox button{width:100%;margin-top:20px}
+.note{font-size:12px;color:#718397;margin-top:12px}
+.videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.videos iframe{width:100%;aspect-ratio:9/16;border:0;border-radius:15px;background:#ddd}
+footer{background:#062653;color:white;padding:40px 6%;margin-top:40px}
+footer a{color:#bde4ff}
+footer p{margin:8px 0}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#20bd65;color:white;padding:16px;border-radius:50%;text-decoration:none;font-weight:bold;z-index:20}
+@media(max-width:750px){
+ header{justify-content:center}
+ nav{justify-content:center}
+ .grid,.services,.videos{grid-template-columns:1fr}
+ .hero{padding:65px 6%}
+ .heading h2{font-size:29px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div>
+<h2>SUJI SIDDHA CLINIC</h2>
+<small>PUTTUR KATTU & BONE SETTING CENTRE</small>
+</div>
+<nav>
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('services')">Our Services</a>
+<a onclick="showPage('appointment')">Appointment</a>
+<a onclick="showPage('contact')">Contact</a>
+</nav>
+</header>
+
+<!-- HOME -->
+<main id="home" class="page active">
+
+<div class="hero">
+<h1>SUJI SIDDHA CLINIC<br>PUTTUR KATTU</h1>
+<p>Traditional Bone Treatment Methods and Patient-Focused Care in Chromepet, Chennai.</p>
+<a class="btn" onclick="showPage('services')">Explore Our Services</a>
+<a class="btn" onclick="showPage('appointment')">Book Appointment</a>
+</div>
+
+<section class="content">
+<img class="banner" src="banner.png" alt="Original Suji Siddha Clinic banner">
+</section>
+
+<section class="content">
+<div class="heading">
+<h2>Welcome to Our Clinic</h2>
+<p>Explore Suji Siddha Clinic and Puttur Kattu Centre in Chromepet.</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<img src="store.jpg" alt="Puttur Kattu Chromepet storefront">
+<div class="card-body">
+<h3>Puttur Kattu Centre</h3>
+<p>Visit our clinic listing and find our location.</p>
+<a class="btn" href="https://jsdl.in/DT-20UMMQ6EU2A" target="_blank">Explore Our Clinic ↗</a>
+</div>
+</div>
+
+<div class="card">
+<img src="banner.png" alt="Suji Siddha Clinic banner">
+<div class="card-body">
+<h3>Suji Siddha Clinic</h3>
+<p>Explore our services and send an appointment enquiry.</p>
+<a class="btn" onclick="showPage('appointment')">Appointment Enquiry</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="content">
+<div class="heading">
+<h2>Our Clinic Videos</h2>
+<p>Watch our latest videos and follow us online.</p>
+</div>
+<div class="videos">
+<iframe src="https://www.youtube-nocookie.com/embed/4OA7kKc3_2Y" title="Clinic video 1" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/vOaad03TbKc" title="Clinic video 2" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/5IdAnwqfYVU" title="Clinic video 3" allowfullscreen></iframe>
+</div>
+<p style="text-align:center;margin-top:25px">
+<a class="btn" href="https://www.instagram.com/putturkattu_chrompet/" target="_blank">Follow Instagram ↗</a>
+</p>
+</section>
+</main>
+
+<!-- SERVICES PAGE -->
+<main id="services" class="page">
+<div class="hero">
+<h1>OUR SERVICES</h1>
+<p>Traditional bone treatment methods and therapy categories.</p>
+<a class="btn" onclick="showPage('appointment')">Enquire About a Service</a>
+</div>
+
+<section class="content">
+<div class="heading">
+<h2>Traditional Bone Treatment Methods</h2>
+<p>Our traditional system of medicine works in conjunction with other medical systems. Contact the clinic to understand treatment options, suitability and possible risks.</p>
+</div>
+
+<div class="services">
+<div class="service">
+<h3>Shoulder Pain</h3>
+<p>Information about shoulder girdle pain and tight shoulder blades.</p>
+</div>
+<div class="service">
+<h3>Back and Hip Pain</h3>
+<p>Information about back pain associated with disc and joint conditions.</p>
+</div>
+<div class="service">
+<h3>Joint Pain Relief</h3>
+<p>Traditional care categories for joint discomfort and mobility concerns.</p>
+</div>
+</div>
+
+<div class="service" style="margin-top:25px">
+<h3>Additional Treatment Categories</h3>
+<div class="tags">
+<span class="tag">Neck Pain</span>
+<span class="tag">Osteoarthritis</span>
+<span class="tag">Frozen Shoulder</span>
+<span class="tag">Joint Dislocation</span>
+<span class="tag">Chronic Pain</span>
+<span class="tag">PIVD Management</span>
+<span class="tag">Fracture Care</span>
+<span class="tag">Sports Injury Rehabilitation</span>
+<span class="tag">Massage Therapy</span>
+<span class="tag">Herbal and Oil Bandaging</span>
+</div>
+</div>
+
+<div class="service" style="margin-top:20px">
+<h3>Therapy Services</h3>
+<div class="tags">
+<span class="tag">Pain Therapy</span>
+<span class="tag">Spinal Physiotherapy</span>
+<span class="tag">Joint Physiotherapy</span>
+<span class="tag">Neck Pain Physiotherapy</span>
+<span class="tag">Prolotherapy</span>
+<span class="tag">Orthopaedic Physiotherapy</span>
+</div>
+</div>
+
+<p style="margin-top:25px;color:#637990;font-size:13px">Service descriptions are general information, not a medical diagnosis or a guarantee of results. Please consult a qualified healthcare professional about treatment suitability.</p>
+</section>
+</main>
+
+<!-- APPOINTMENT PAGE -->
+<main id="appointment" class="page">
+<div class="hero">
+<h1>BOOK AN APPOINTMENT</h1>
+<p>Fill in your details and send your enquiry to our clinic through WhatsApp.</p>
+</div>
+
+<section class="content">
+<form class="formbox" id="appointmentForm">
+<h2>Appointment Enquiry</h2>
+
+<label for="name">Your Name *</label>
+<input id="name" type="text" placeholder="Enter your name" required maxlength="80">
+
+<label for="phone">Phone Number *</label>
+<input id="phone" type="tel" placeholder="Enter your phone number" required maxlength="20">
+
+<label for="clinic">Choose Clinic *</label>
+<select id="clinic" required>
+<option value="">Select clinic</option>
+<option>Puttur Kattu Centre</option>
+<option>Suji Siddha Clinic</option>
+</select>
+
+<label for="query">Your Query *</label>
+<textarea id="query" placeholder="Tell us your enquiry or the service you are interested in" required maxlength="1200"></textarea>
+
+<button type="submit">Send Appointment Enquiry via WhatsApp</button>
+<p class="note">This sends your enquiry to WhatsApp. It does not automatically confirm an appointment. The clinic must reply to confirm.</p>
+</form>
+</section>
+</main>
+
+<!-- CONTACT PAGE -->
+<main id="contact" class="page">
+<div class="hero">
+<h1>CONTACT OUR CLINIC</h1>
+<p>Suji Siddha Clinic and Puttur Kattu Centre, Chromepet, Chennai.</p>
+<a class="btn" href="https://maps.app.goo.gl/68bJcuMxPKBYrkSn9" target="_blank">Get Directions ↗</a>
+</div>
+
+<section class="content">
+<div class="grid">
+<div class="card">
+<img src="store.jpg" alt="Original clinic storefront">
+<div class="card-body">
+<h3>Visit Our Clinic</h3>
+<p>Chromepet, Chennai, Tamil Nadu.</p>
+<a class="btn" href="https://maps.app.goo.gl/68bJcuMxPKBYrkSn9" target="_blank">Open Google Maps ↗</a>
+</div>
+</div>
+<div class="card">
+<div class="card-body">
+<h3>Contact Details</h3>
+<p>Phone / WhatsApp: +91 73973 83061</p>
+<a class="btn" href="https://wa.me/917397383061" target="_blank">WhatsApp Us</a>
+<p style="margin-top:15px"><a href="https://jsdl.in/DT-20UMMQ6EU2A" target="_blank">Justdial Listing ↗</a></p>
+<p><a href="https://share.google/NdnThAAwVDAD93AFQ" target="_blank">Google Clinic Share Link ↗</a></p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<h2>Suji Siddha Clinic</h2>
+<p>Puttur Kattu & Bone Setting Centre</p>
+<p>Chromepet, Chennai, Tamil Nadu</p>
+<p>Phone / WhatsApp: +91 73973 83061</p>
+<p>
+<a href="https://www.instagram.com/putturkattu_chrompet/" target="_blank">Instagram</a> |
+<a href="https://youtube.com/@siddaclinicclinic2265" target="_blank">YouTube</a> |
+<a href="https://maps.app.goo.gl/68bJcuMxPKBYrkSn9" target="_blank">Google Maps</a>
+</p>
+<p style="margin-top:15px">© <span id="year"></span> Suji Siddha Clinic. All rights reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917397383061" target="_blank" aria-label="WhatsApp">☎</a>
+
+<script>
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.getElementById('appointmentForm').addEventListener('submit',function(e){
+ e.preventDefault();
+
+ const name=document.getElementById('name').value.trim();
+ const phone=document.getElementById('phone').value.trim();
+ const clinic=document.getElementById('clinic').value;
+ const query=document.getElementById('query').value.trim();
+
+ if(!name||!phone||!clinic||!query){
+  alert('Please fill in all fields.');
+  return;
+ }
+
+ const digits=phone.replace(/\D/g,'');
+ if(digits.length<10||digits.length>15){
+  alert('Please enter a valid phone number.');
+  return;
+ }
+
+ const message=
+ 'Appointment Enquiry\n\n'+
+ 'Name: '+name+'\n'+
+ 'Phone: '+phone+'\n'+
+ 'Clinic: '+clinic+'\n'+
+ 'Query: '+query;
+
+ window.open('https://wa.me/917397383061?text='+encodeURIComponent(message),'_blank');
+});
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
